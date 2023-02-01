@@ -1,0 +1,11 @@
+Oppgave 2
+
+a) Hva er størrelsesorden uttrykt i O-notasjon
+
+ i.  4𝑛^2 + 50𝑛 − 10
+     4 * n^2 + 50 * n - 10  (Find the fastest groeing term)
+     4 * n^2  (take out the coeffieient)
+     n*2  
+     Størrelsesorden uttrykt i O-notasjon er O(n^2).
+     
+ii.  10𝑛 + 4 log2 𝑛 + 30
