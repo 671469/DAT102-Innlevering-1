@@ -1,18 +1,19 @@
 package no.hvl.data102;
 
+import no.hvl.data102.Sjanger;
+
 public class Film {
 // 1.1 - Data
 	int filmNr;
 	String filmSkaper;
 	String tittel;
 	int lanseringsår;
-	//enum Sjanger; 
-	//Hvordan gjør man dette? Husk å sett inn i kontruktører og metoder!!
+	Sjanger sjanger; 
 	String filmSelskap;
 
 // Konstruktører
-	
-	Film tomFilm; // Tror dette kan være riktig, men vet egt ike hehe
+	public Film() {
+	}
 	
 	public Film(int filmNr, String filmSkaper, String tittel,
 			int lanseringsår, String filmSelskap) {
@@ -72,7 +73,7 @@ public class Film {
 	 */
 	@Override 
 	public int hashCode() { 
-	    Integer temp = nr; 
+	    Integer temp = filmNr; 
 	    return temp.hashCode(); 
 	} 
 	public static void main(String[] args) {
