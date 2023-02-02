@@ -28,5 +28,10 @@ b)  Effiktiviteten uttrykt i O-notasjon er O(n). dette ser vi fra algoritmen ett
     
 c) samme greie som b
      
-     
+d) areal =2pi*r^2
+   I O-otasjon blir dette O(r^2)
+   Omkrets = 2pi*r
+   I stor O-notasjon blir dette O(r).
+   
+e)
     
