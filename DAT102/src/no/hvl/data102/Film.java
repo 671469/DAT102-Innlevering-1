@@ -56,15 +56,13 @@ public class Film {
 	// equals metode
 	@Override
 	public boolean equals(Object obj) {
-		Film s = (Film) obj;
-		
-		if (getFilmNr() != s.getFilmNr()) {
-			return false;
-		}
-		else {
-			return true;
-		}
-	}
+        if (obj == this) return true;
+        if (!(obj instanceof Film)) return false;
+
+        Film _film = (Film) obj;
+
+        return _film.getFilmNr() == this.getFilmNr();
+    }
 	
 	// hashcode metode
 	@Override 
