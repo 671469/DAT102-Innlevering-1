@@ -20,8 +20,9 @@ a) Hva er størrelsesorden uttrykt i O-notasjon
       Størrelsesorden uttrykt i O-notasjon er O(n^3).
       
  iv.  35 + 13log_2 n 
-      The fastest growing term is 13log_2 * n
-      //Enten O(log(n)), eller O(n(log(n)))
+      The fastest growing term is 13*log_2n
+      Take out the coefficient: log_2n
+      Størrelsesorden uttrykt i O-notasjon er O(log n ).
       
 b)  Effiktiviteten uttrykt i O-notasjon er O(n). dette ser vi fra algoritmen ettersom vi kan omskrive den som O(.....
     Hva mens med antall tillordinger(=) for algoritmen??
