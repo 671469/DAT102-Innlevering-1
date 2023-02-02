@@ -40,6 +40,11 @@ public class Filmarkiv implements FilmarkivADT{
 
 	@Override
 	public void leggTilFilm(Film nyFilm) {
+		if (antall == filmTabell.length) {
+			utvid();
+		}
+		filmTabell[antall] = nyFilm;
+		antall++;
 	}
 
 	@Override
@@ -57,12 +62,34 @@ public class Filmarkiv implements FilmarkivADT{
 
 			@Override
 			public Film[] soekTittel(String delstreng) {
-				return null;
+				int antallFilmResultat = 0;
+				int i = 0;
+				Film[] resultat = new Film[antall];
+
+				while (i < antall) {
+					if (filmTabell[i].getTittel().contains(delstreng)) {
+						resultat[antallFilmResultat] = filmTabell[i];
+						antallFilmResultat++;
+					}
+					i++;
+				}
+				return resultat;
 			}
 
 	@Override
 	public Film[] soekProdusent(String delstreng) {
-		return null;
+		int antallFilmResultat = 0;
+		int i = 0;
+		Film[] resultat =new Film[antall];
+		
+		while (i < antall) {
+			if (filmTabell[i].getFilmSkaper().contains(delstreng)) {
+				resultat[antallFilmResultat] = filmTabell[i];
+				antallFilmResultat++;
+			}
+			i++;
+		}
+		return resultat;
 	}
 
 	@Override
