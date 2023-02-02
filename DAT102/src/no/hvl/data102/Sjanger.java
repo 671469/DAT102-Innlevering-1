@@ -10,7 +10,6 @@ public enum Sjanger {
                 sjang = sj;
                 break;
             }
-
         }
         return sjang;
     }
