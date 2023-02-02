@@ -1,7 +1,5 @@
 package no.hvl.data102;
 
-import no.hvl.data102.Sjanger;
-
 public class Film {
 // 1.1 - Data
 	int filmNr;
@@ -54,6 +52,7 @@ public class Film {
 	public String getFilmSelkap() {
 		return filmSelskap;
 	}
+	
 	// equals metode
 	@Override
 	public boolean equals(Object obj) {
@@ -66,15 +65,11 @@ public class Film {
 			return true;
 		}
 	}
-	// hashcode metode
 	
+	// hashcode metode
 	@Override 
 	public int hashCode() { 
 	    Integer temp = filmNr; 
 	    return temp.hashCode(); 
 	} 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 }
