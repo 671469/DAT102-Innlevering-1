@@ -21,7 +21,21 @@ public class Filmarkiv implements FilmarkivADT{
 	
 	@Override
 	public Film finnFilm(int nr) {
-		return null;
+		boolean funnet = false;
+		int pos = 0;
+		
+		while (pos < antall && !funnet) {
+			if (filmTabell[pos].getFilmNr() == nr) {
+				funnet = true;
+			} else {
+				pos++;
+			}
+		}
+		if (funnet) {
+			return filmTabell[pos];
+		} else {
+			return null;
+		}
 	}
 
 	@Override
@@ -29,14 +43,22 @@ public class Filmarkiv implements FilmarkivADT{
 	}
 
 	@Override
-	public boolean slettFilm(int filmnr) {
+	public boolean slettFilm(int filmnr) {	
+		for (int pos = 0; pos < antall; pos++) {
+			if (filmTabell[pos].getFilmNr() == filmnr) {
+				antall--;
+				filmTabell[pos] = filmTabell[antall];
+				filmTabell[antall] = null;
+				return true;
+			}
+		}
 		return false;
-	}
+}
 
-	@Override
-	public Film[] soekTittel(String delstreng) {
-		return null;
-	}
+			@Override
+			public Film[] soekTittel(String delstreng) {
+				return null;
+			}
 
 	@Override
 	public Film[] soekProdusent(String delstreng) {
