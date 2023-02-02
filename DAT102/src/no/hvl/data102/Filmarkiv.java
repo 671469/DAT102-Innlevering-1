@@ -11,6 +11,14 @@ public class Filmarkiv implements FilmarkivADT{
 		antall = 0;
 	}
 	
+	private void utvid(){
+        Film[] nyListe = new Film[filmTabell.length * 2];
+        for(int i = 0; i < filmTabell.length; i++){
+            nyListe[i] = filmTabell[i];
+        }
+        filmTabell = nyListe;
+    }
+	
 	@Override
 	public Film finnFilm(int nr) {
 		return null;
