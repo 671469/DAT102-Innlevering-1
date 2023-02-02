@@ -2,10 +2,36 @@ Oppgave 2
 
 a) Hva er størrelsesorden uttrykt i O-notasjon
 
- i.  4𝑛^2 + 50𝑛 − 10
-     4 * n^2 + 50 * n - 10  (Find the fastest groeing term)
-     4 * n^2  (take out the coeffieient)
-     n*2  
-     Størrelsesorden uttrykt i O-notasjon er O(n^2).
+  i.  4𝑛^2 + 50𝑛 − 10
+      4 * n^2 + 50 * n - 10  (Find the fastest growng term)
+      4 * n^2  (take out the coefficient)
+      n*2  
+      Størrelsesorden uttrykt i O-notasjon er O(n^2).
      
-ii.  10𝑛 + 4 log2 𝑛 + 30
+ ii.  10𝑛 + 4 log_2 n + 30
+      10 * n + 4log_2 * n + 30 (Find the fastest growing term)
+      10 * n (take out the coefficient)
+      n
+      Størrelsesorden uttrykt i O-notasjon er O(n).
+ 
+ iii. 13𝑛^3 + 22𝑛^2 + 50𝑛 + 20
+      The fastest growing term is 13 * n^3
+      Take out the coefficient: n^3
+      Størrelsesorden uttrykt i O-notasjon er O(n^3).
+      
+ iv.  35 + 13log_2 n 
+      The fastest growing term is 13log_2 * n
+      //Enten O(log(n)), eller O(n(log(n)))
+      
+b)  Effiktiviteten uttrykt i O-notasjon er O(n). dette ser vi fra algoritmen ettersom vi kan omskrive den som O(.....
+    Hva mens med antall tillordinger(=) for algoritmen??
+    
+c) samme greie som b
+     
+d) areal =2pi*r^2
+   I O-otasjon blir dette O(r^2)
+   Omkrets = 2pi*r
+   I stor O-notasjon blir dette O(r).
+   
+e)
+    

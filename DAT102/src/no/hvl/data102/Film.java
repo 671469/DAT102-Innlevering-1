@@ -67,10 +67,7 @@ public class Film {
 		}
 	}
 	// hashcode metode
-	/* Oppgaven sier at om nr er det samme som medlemsvariabelen 
-	 * kan vi skrive hashcode slik som under, men hva er
-	 * medlemsvariablene? den er ikke nevnt noen steder tidligere!!
-	 */
+	
 	@Override 
 	public int hashCode() { 
 	    Integer temp = filmNr; 
