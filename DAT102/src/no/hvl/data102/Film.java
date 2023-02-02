@@ -12,7 +12,7 @@ public class Film {
 	String filmSelskap;
 
 // Konstruktører
-	public Film() {
+	public Film() { 
 	}
 	
 	public Film(int filmNr, String filmSkaper, String tittel,
