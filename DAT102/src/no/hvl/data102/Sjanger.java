@@ -1,7 +1,17 @@
 package no.hvl.data102;
 
 public enum Sjanger {
-	DRAMA, DOKUMENTAR, KOMEDIE, ACTION, THRILLER
-}
+	ACTION, DRAMA, HISTORY, SCIFI;
 
-//flere metoder
+    public static Sjanger finnSjanger(String navn) {
+        Sjanger sjang = null;
+        for (Sjanger sj : Sjanger.values()) {
+            if (sj.toString().equals(navn.toUpperCase())) {
+                sjang = sj;
+                break;
+            }
+
+        }
+        return sjang;
+    }
+}
