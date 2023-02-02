@@ -24,10 +24,9 @@ a) Hva er størrelsesorden uttrykt i O-notasjon
       Take out the coefficient: log_2n
       Størrelsesorden uttrykt i O-notasjon er O(log n ).
       
-b)  Effiktiviteten uttrykt i O-notasjon er O(n). dette ser vi fra algoritmen ettersom vi kan omskrive den som O(.....
-    Hva mens med antall tillordinger(=) for algoritmen??
-    
-c) samme greie som b
+b)  Vi ser av løkken utføres log_2 n ganger, så effiktiviteten uttrykt i stor O-notasjon blir logaritmisk O(log n).
+        
+c) Løkkes utføes n * 2n ganger, så effiktiviteten uttrykt i stor O-notasjon blir kvadratisk O(n^2).
      
 d) areal =2pi*r^2
    I O-otasjon blir dette O(r^2)
