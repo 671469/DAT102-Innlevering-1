@@ -35,3 +35,14 @@ d) areal =2pi*r^2
    
 e)
     
+f)  i.  𝑡_1(𝑛) = 8𝑛 + 4𝑛^3
+        O-notasjon er O(n^3).
+    ii. 𝑡_2(𝑛) = 10 log_2 𝑛 + 20
+        O-notasjon er O(log n).
+   iii. 𝑡_3(𝑛) = 20𝑛 + 2𝑛 log_2 𝑛 + 11
+        O-notasjonen er O(n log n).
+    iv. 𝑡_4(𝑛) = 4 log_2 𝑛 + 2n
+        O-notasjonen er O(n).
+        
+    Rangert fra hvor effektiv de er (best til verst):
+    ii., iv., iii., i.
