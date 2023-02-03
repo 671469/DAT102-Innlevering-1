@@ -11,7 +11,7 @@ public class Filmarkiv implements FilmarkivADT{
 		antall = 0;
 	}
 
-	private void utvid(){
+	private void utvid() {
 		Film[] nyListe = new Film[filmTabell.length * 2];
 		for(int i = 0; i < filmTabell.length; i++){
 			nyListe[i] = filmTabell[i];
@@ -80,7 +80,7 @@ public class Filmarkiv implements FilmarkivADT{
 	public Film[] soekProdusent(String delstreng) {
 		int antallFilmResultat = 0;
 		int i = 0;
-		Film[] resultat =new Film[antall];
+		Film[] resultat = new Film[antall];
 
 		while (i < antall) {
 			if (filmTabell[i].getFilmSkaper().contains(delstreng)) {
