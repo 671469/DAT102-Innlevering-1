@@ -49,7 +49,7 @@ public class Tekstgrensesnitt {
 	// Skrive ut alle Filmer med en spesiell delstreng i tittelen
 	public void skrivUtFilmDelstrengITittel(FilmarkivADT filma,
 			String delstreng) {
-		// TODO
+		
 	}
 	// Skriver ut alle Filmer av en produsent / en gruppe
 	public void skrivUtFilmProdusent(FilmarkivADT filma, String delstreng) {
