@@ -43,48 +43,6 @@ public class Filmarkiv2 implements FilmarkivADT {
         node.setNeste(new LinearNode<Film>(nyFilm));
         antall++;
     }
-	 @Override
-	    public boolean slettFilm(int filmnr) {
-	        boolean slettet = false;
-	        LinearNode<Film> node = this.start;
-	        LinearNode<Film> forrigeNode = null;
-
-	        while (!slettet) {
-	            LinearNode<Film> nesteNode = node.getNeste();
-
-	            if (node.getElement().getNr() == filmnr) {
-	                if (forrigeNode == null) {
-	                    slettet = true;
-	                    this.start = nesteNode;
-	                } else {
-	                    slettet = true;
-	                    forrigeNode.setNeste(nesteNode);
-	                }
-	            }
-
-	            node = nesteNode;
-	            forrigeNode = node;
-	        }
-
-	        return slettet;
-	    }
-
-	    @Override
-	    public Film[] soekTittel(String delstreng) {
-	        Film[] filmerMedTittel = new Film[this.antall];
-	        int antallFilmerMedTittel = 0;
-
-	        LinearNode<Film> node = this.start;
-
-	        while (node != null) {
-	            if (node.getElement().getTittel().contains(delstreng)) {
-	                filmerMedTittel[antallFilmerMedTittel] = node.getElement();
-	                antallFilmerMedTittel++;
-	            }
-	        }
-
-	        return trimListe(filmerMedTittel, antallFilmerMedTittel);
-	    }
 
 	    @Override
 	    public Film[] soekProdusent(String delstreng) {
