@@ -8,30 +8,36 @@ public class Meny {
 
 	private Tekstgrensesnitt tekstgr;
 	private FilmarkivADT filmarkiv;
-	
+
 	public Meny(FilmarkivADT filmarkiv){
 		tekstgr = new Tekstgrensesnitt();
 		this.filmarkiv = filmarkiv;
 	}
-	
+
 	public void start(){
 		Film [] filmer;
-	    filmer = new Film[5];
+		filmer = new Film[5];
 
 
-	    filmer[0] = new Film(1, "Christopher Nolan", "Interstellar",
-	                                 2014, Sjanger.SCIFI, "Legendary PP");
+		filmer[0] = new Film(1, "Christopher Nolan", "Interstellar",
+				2014, Sjanger.SCIFI, "Legendary PP");
 
-	    filmer[1] = new Film(2, "Christopher Nolan", "Dunkirk",
-	                                 2017, Sjanger.ACTION, "Warner Bros");
+		filmer[1] = new Film(2, "Christopher Nolan", "Dunkirk",
+				2017, Sjanger.ACTION, "Warner Bros");
 
-	    filmer[2] = new Film(3, "Megan Park", "The Fallout",
-	                                 2021, Sjanger.DRAMA, "New Line Cinema");
+		filmer[2] = new Film(3, "Megan Park", "The Fallout",
+				2021, Sjanger.DRAMA, "New Line Cinema");
 
-			for (Film film : filmer) {
-	        this.filmarkiv.leggTilFilm(film);
-		
+		for (Film film : filmer) {
+			this.filmarkiv.leggTilFilm(film);
+
+		}
+
+		Film film = this.tekstgr.lesFilm();
+		this.tekstgr.visFilm(film);
+		this.tekstgr.skrivUtFilmDelstrengITittel(this.filmarkiv, "The");
+		this.tekstgr.skrivUtFilmProdusent(this.filmarkiv, "Nolan");
+		this.tekstgr.skrivUtStatistikk(this.filmarkiv);
+
 	}
-
-}
 }
