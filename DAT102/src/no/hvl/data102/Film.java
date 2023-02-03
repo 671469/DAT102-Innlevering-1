@@ -14,7 +14,7 @@ public class Film {
 	}
 	
 	public Film(int filmNr, String filmSkaper, String tittel,
-			int lanseringsår, String filmSelskap) {
+			int lanseringsår, Sjanger Sjanger, String filmSelskap) {
 		this.filmNr = filmNr;  this.tittel = tittel;
 		this.filmSkaper = filmSkaper;  this.lanseringsår = lanseringsår;
 		this.filmSelskap = filmSelskap;
