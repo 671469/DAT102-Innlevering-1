@@ -1,5 +1,7 @@
 package no.hvl.data102.klient;
 
+import no.hvl.data102.Film;
+import no.hvl.data102.Sjanger;
 import no.hvl.data102.adt.FilmarkivADT;
 
 public class Meny {
@@ -13,8 +15,7 @@ public class Meny {
 	}
 	
 	public void start(){
-	 // legg inn en del forhåndsdefinerte filmer for å teste metodene
-	// TODO
+		
 	}
 
 }
