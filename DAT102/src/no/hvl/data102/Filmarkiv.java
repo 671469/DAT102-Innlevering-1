@@ -107,7 +107,7 @@ public class Filmarkiv implements FilmarkivADT{
 
 	@Override
 	public int antall() {
-		return 0;
+		return antall;
 		
 	}
 
