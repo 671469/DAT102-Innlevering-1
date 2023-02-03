@@ -14,7 +14,7 @@ public class Film {
 	}
 	
 	public Film(int filmNr, String filmSkaper, String tittel,
-			int lanseringsår, Sjanger Sjanger, String filmSelskap) {
+			int lanseringsår, Sjanger sjanger, String filmSelskap) {
 		this.filmNr = filmNr;  this.tittel = tittel;
 		this.filmSkaper = filmSkaper;  this.lanseringsår = lanseringsår;
 		this.filmSelskap = filmSelskap;
@@ -34,23 +34,29 @@ public class Film {
 	public void setLanseringsår(int lanseringsår) {
 		this.lanseringsår = lanseringsår;
 	}
+	public void setSjanger(Sjanger sjanger) {
+		this.sjanger = sjanger;
+	}
 	public void setFilmSelskap(String filmSelskap) {
 		this.filmSelskap = filmSelskap;
 	}
 	public int getFilmNr() {
-		return filmNr;
+		return this.filmNr;
 	}
 	public String getFilmSkaper() {
-		return filmSkaper;
+		return this.filmSkaper;
 	}
 	public String getTittel() {
-		return tittel;
+		return this.tittel;
 	}
 	public int getLanseringsår() {
-		return lanseringsår;
+		return this.lanseringsår;
+	}
+	public Sjanger getSjanger() {
+		return this.sjanger;
 	}
 	public String getFilmSelkap() {
-		return filmSelskap;
+		return this.filmSelskap;
 	}
 	
 	// equals metode
