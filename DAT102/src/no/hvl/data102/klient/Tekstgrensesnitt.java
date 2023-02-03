@@ -72,5 +72,3 @@ public class Tekstgrensesnitt {
 	// … Ev. andre metoder
 
 }
-//ksjnjkns dvc
-
