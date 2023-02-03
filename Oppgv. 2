@@ -33,7 +33,7 @@ d) areal =2pi*r^2
    Omkrets = 2pi*r
    I stor O-notasjon blir dette O(r).
    
-e)
+e) Vi ser at i verste tilfelle så må denne algoritmen utføres n^2 + n ganger, uttrykt i O-notasjon blir dette O(n^2)
     
 f)  i.  𝑡_1(𝑛) = 8𝑛 + 4𝑛^3
         O-notasjon er O(n^3).
