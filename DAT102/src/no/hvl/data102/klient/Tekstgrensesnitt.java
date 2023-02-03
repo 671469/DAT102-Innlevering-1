@@ -46,15 +46,24 @@ public class Tekstgrensesnitt {
 		System.out.println("Sjanger: " + film.getSjanger().toString());
 		System.out.println("Filmselskap: " + film.getFilmSelskap());
 	}
-	// Skrive ut alle Filmer med en spesiell delstreng i tittelen
+
 	public void skrivUtFilmDelstrengITittel(FilmarkivADT filma,
 			String delstreng) {
+		Film[] delstrengITittel = filma.soekTittel(delstreng);
+		
+		for (Film film : delstrengITittel) {
+			this.visFilm(film);
+		}
 		
 	}
 	// Skriver ut alle Filmer av en produsent / en gruppe
 	public void skrivUtFilmProdusent(FilmarkivADT filma, String delstreng) {
-		// TODO Denne gjør tilsvarende som metoden over
+		Film[] avFilmSkaper = filma.soekProdusent(delstreng);
+		
+		for (Film film : avFilmSkaper) {
+			this.visFilm(film);
 	}
+}
 	// Skrive ut en enkel statistikk som inneholder antall Filmer totalt
 	// og hvor mange det er i hver sjanger
 	public void skrivUtStatistikk(FilmarkivADT filma) {
