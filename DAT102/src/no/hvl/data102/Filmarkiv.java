@@ -5,25 +5,25 @@ import no.hvl.data102.adt.FilmarkivADT;
 public class Filmarkiv implements FilmarkivADT{
 	Film[] filmTabell;
 	int antall;
-	
+
 	public Filmarkiv(int størrelse) {
 		filmTabell = new Film[størrelse];
 		antall = 0;
 	}
-	
+
 	private void utvid(){
-        Film[] nyListe = new Film[filmTabell.length * 2];
-        for(int i = 0; i < filmTabell.length; i++){
-            nyListe[i] = filmTabell[i];
-        }
-        filmTabell = nyListe;
-    }
-	
+		Film[] nyListe = new Film[filmTabell.length * 2];
+		for(int i = 0; i < filmTabell.length; i++){
+			nyListe[i] = filmTabell[i];
+		}
+		filmTabell = nyListe;
+	}
+
 	@Override
 	public Film finnFilm(int nr) {
 		boolean funnet = false;
 		int pos = 0;
-		
+
 		while (pos < antall && !funnet) {
 			if (filmTabell[pos].getFilmNr() == nr) {
 				funnet = true;
@@ -58,30 +58,30 @@ public class Filmarkiv implements FilmarkivADT{
 			}
 		}
 		return false;
-}
+	}
 
-			@Override
-			public Film[] soekTittel(String delstreng) {
-				int antallFilmResultat = 0;
-				int i = 0;
-				Film[] resultat = new Film[antall];
+	@Override
+	public Film[] soekTittel(String delstreng) {
+		int antallFilmResultat = 0;
+		int i = 0;
+		Film[] resultat = new Film[antall];
 
-				while (i < antall) {
-					if (filmTabell[i].getTittel().contains(delstreng)) {
-						resultat[antallFilmResultat] = filmTabell[i];
-						antallFilmResultat++;
-					}
-					i++;
-				}
-				return resultat;
+		while (i < antall) {
+			if (filmTabell[i].getTittel().contains(delstreng)) {
+				resultat[antallFilmResultat] = filmTabell[i];
+				antallFilmResultat++;
 			}
+			i++;
+		}
+		return resultat;
+	}
 
 	@Override
 	public Film[] soekProdusent(String delstreng) {
 		int antallFilmResultat = 0;
 		int i = 0;
 		Film[] resultat =new Film[antall];
-		
+
 		while (i < antall) {
 			if (filmTabell[i].getFilmSkaper().contains(delstreng)) {
 				resultat[antallFilmResultat] = filmTabell[i];
@@ -94,9 +94,9 @@ public class Filmarkiv implements FilmarkivADT{
 
 	@Override
 	public int antall(Sjanger sjanger) {
-		
+
 		int antallSjanger = 0;
-		
+
 		for (Film film : filmTabell) {
 			if (film.getSjanger() == sjanger) {
 				antallSjanger++;
@@ -108,7 +108,7 @@ public class Filmarkiv implements FilmarkivADT{
 	@Override
 	public int antall() {
 		return antall;
-		
+
 	}
 
 }
