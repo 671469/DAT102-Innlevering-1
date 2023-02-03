@@ -54,9 +54,8 @@ public class Tekstgrensesnitt {
 		for (Film film : delstrengITittel) {
 			this.visFilm(film);
 		}
-		
 	}
-	// Skriver ut alle Filmer av en produsent / en gruppe
+
 	public void skrivUtFilmProdusent(FilmarkivADT filma, String delstreng) {
 		Film[] avFilmSkaper = filma.soekProdusent(delstreng);
 		
@@ -64,11 +63,10 @@ public class Tekstgrensesnitt {
 			this.visFilm(film);
 	}
 }
+
 	// Skrive ut en enkel statistikk som inneholder antall Filmer totalt
 	// og hvor mange det er i hver sjanger
 	public void skrivUtStatistikk(FilmarkivADT filma) {
 		// TODO
 	}
-	// … Ev. andre metoder
-
 }
