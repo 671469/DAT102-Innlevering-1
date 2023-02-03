@@ -50,7 +50,7 @@ public class Tekstgrensesnitt {
 	public void skrivUtFilmDelstrengITittel(FilmarkivADT filma,
 			String delstreng) {
 		Film[] delstrengITittel = filma.soekTittel(delstreng);
-		
+
 		for (Film film : delstrengITittel) {
 			this.visFilm(film);
 		}
@@ -58,15 +58,25 @@ public class Tekstgrensesnitt {
 
 	public void skrivUtFilmProdusent(FilmarkivADT filma, String delstreng) {
 		Film[] avFilmSkaper = filma.soekProdusent(delstreng);
-		
+
 		for (Film film : avFilmSkaper) {
 			this.visFilm(film);
+		}
 	}
-}
 
-	// Skrive ut en enkel statistikk som inneholder antall Filmer totalt
-	// og hvor mange det er i hver sjanger
 	public void skrivUtStatistikk(FilmarkivADT filma) {
-		// TODO
+
+		int antall = filma.antall();
+		int antallAction = filma.antall(Sjanger.ACTION);
+		int antallDrama = filma.antall(Sjanger.DRAMA);
+		int antallHistory = filma.antall(Sjanger.HISTORY);
+		int antallScifi = filma.antall(Sjanger.SCIFI);
+
+		System.out.println("Totalt antall filmer: " + antall);
+		System.out.println("Sjangere: ");
+		System.out.println("Antall action: " + antallAction);
+		System.out.println("Antall drama: " + antallDrama);
+		System.out.println("Antall historie: " + antallHistory);
+		System.out.println("Antall sci-fi: " + antallScifi);
 	}
 }

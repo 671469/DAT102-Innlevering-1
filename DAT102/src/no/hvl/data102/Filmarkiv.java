@@ -94,6 +94,12 @@ public class Filmarkiv implements FilmarkivADT{
 
 	@Override
 	public int antall(Sjanger sjanger) {
+		
+		for (int antallSjanger = 0; antallSjanger<filmTabell.length; antallSjanger++) {
+			if (Film.getSjanger() == sjanger) {
+				
+			}
+		}
 		return 0;
 	}
 

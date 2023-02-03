@@ -1,7 +1,8 @@
 package no.hvl.data102;
 
 public class Film {
-// 1.1 - Data
+
+	// 1.1 - Data
 	int filmNr;
 	String filmSkaper;
 	String tittel;
@@ -9,18 +10,18 @@ public class Film {
 	Sjanger sjanger; 
 	String filmSelskap;
 
-// Konstruktører
+	// Konstruktører
 	public Film() { 
 	}
-	
+
 	public Film(int filmNr, String filmSkaper, String tittel,
 			int lanseringsår, Sjanger sjanger, String filmSelskap) {
 		this.filmNr = filmNr;  this.tittel = tittel;
 		this.filmSkaper = filmSkaper;  this.lanseringsår = lanseringsår;
-		this.filmSelskap = filmSelskap;
+		this.sjanger = sjanger; this.filmSelskap = filmSelskap;
 	}
-	  
-// Metoder
+
+	// Metoder
 	// get og set metoder
 	public void setFilmNr(int filmNr) {
 		this.filmNr = filmNr;
@@ -58,22 +59,22 @@ public class Film {
 	public String getFilmSelskap() {
 		return this.filmSelskap;
 	}
-	
+
 	// equals metode
 	@Override
 	public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (!(obj instanceof Film)) return false;
+		if (obj == this) return true;
+		if (!(obj instanceof Film)) return false;
 
-        Film _film = (Film) obj;
+		Film _film = (Film) obj;
 
-        return _film.getFilmNr() == this.getFilmNr();
-    }
-	
+		return _film.getFilmNr() == this.getFilmNr();
+	}
+
 	// hashcode metode
 	@Override 
 	public int hashCode() { 
-	    Integer temp = filmNr; 
-	    return temp.hashCode(); 
+		Integer temp = filmNr; 
+		return temp.hashCode(); 
 	} 
 }
