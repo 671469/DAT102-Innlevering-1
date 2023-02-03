@@ -47,4 +47,6 @@ f)  i.  𝑡_1(𝑛) = 8𝑛 + 4𝑛^3
     Rangert fra hvor effektiv de er (best til verst):
     ii., iv., iii., i.
     
-g) tid()-metoden er T(n) = cn, der c er en konstant. Dette ser vi ettersom koden vil utføres n 
+g) tid()-metoden er T(n) = cn, der c er en konstant. Begrunnelse:
+   f(n) = O(g(n)) if c and some initial value k are positive when f(n) <= c * g(n) for all n > k is true.
+   
