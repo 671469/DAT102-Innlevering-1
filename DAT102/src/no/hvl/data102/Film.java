@@ -55,7 +55,7 @@ public class Film {
 	public Sjanger getSjanger() {
 		return this.sjanger;
 	}
-	public String getFilmSelkap() {
+	public String getFilmSelskap() {
 		return this.filmSelskap;
 	}
 	
